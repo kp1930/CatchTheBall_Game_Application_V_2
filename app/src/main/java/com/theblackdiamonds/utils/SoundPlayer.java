@@ -1,4 +1,4 @@
-package theblackdiamonds.com.utils;
+package com.theblackdiamonds.utils;
 
 import android.content.Context;
 import android.media.AudioAttributes;
@@ -6,7 +6,7 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Build;
 
-import theblackdiamonds.com.R;
+import com.theblackdiamonds.R;
 
 public class SoundPlayer {
     private static SoundPool soundPool;
