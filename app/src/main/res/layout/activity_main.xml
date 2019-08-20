@@ -1,10 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    tools:context=".activities.MainActivity">
 
+    <TextView
+        android:id="@+id/scoreLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:paddingVertical="14dp"
+        android:text="@string/score"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="UnusedAttribute" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout
+        android:id="@+id/gameFrame"
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/box"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="bottom"
+            android:contentDescription="@string/box_right"
+            android:src="@drawable/box_right"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/black"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/black"
+            android:src="@drawable/black"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/orange"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@string/orange"
+            android:src="@drawable/orange"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/pink"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/pink"
+            android:src="@drawable/pink"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/startLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/app_name"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/highScoreLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:text="@string/high_score_300"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:onClick="startGame"
+                android:text="@string/start" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:onClick="quitGame"
+                android:text="@string/quit" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

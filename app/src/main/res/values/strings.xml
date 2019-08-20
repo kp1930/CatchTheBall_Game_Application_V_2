@@ -1,5 +1,13 @@
 <resources>
 
     <string name="app_name">Catch The Ball</string>
+    <string name="score">Score : 0</string>
+    <string name="box_right">TODO</string>
+    <string name="black">TODO</string>
+    <string name="orange">TODO</string>
+    <string name="pink">TODO</string>
+    <string name="high_score_300">High Score : 300</string>
+    <string name="start">START</string>
+    <string name="quit">Quit</string>
 
 </resources>
